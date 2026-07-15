@@ -38,30 +38,4 @@ services:
 
   # ── Blackbox Exporter: probes URLs/endpoints (up/down, latency) ─
   blackbox_exporter:
-    image: prom/blackbox-exporter:v0.28.0
-    container_name: blackbox_exporter
-    restart: unless-stopped
-    volumes:
-      - ./blackbox_exporter/blackbox.yml:/etc/blackbox_exporter/config.yml:ro
-    ports:
-      - "9115:9115"
-    networks:
-      - monitoring
-
-  # ── Grafana: dashboards and visualization ────────────────────────
-  grafana:
-    image: grafana/grafana-enterprise:13.1.0
-    container_name: grafana
-    restart: unless-stopped
-    environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin   # change this before real use
-    volumes:
-      - grafana_data:/var/lib/grafana
-      - ./grafana/provisioning:/etc/grafana/provisioning:ro
-    ports:
-      - "3000:3000"
-    networks:
-      - monitoring
-    depends_on:
-      - prometheus
+    image: prom/blackbox-exporte
