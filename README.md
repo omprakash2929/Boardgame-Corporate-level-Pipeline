@@ -28,7 +28,19 @@ Git Push → Jenkins CI → Compile & Test → Trivy FS Scan → SonarQube Analy
 ```
 
 ---
+![Jenkins Pipeline](screenshot/Jenkins.png)
+![SonarQube](screenshot/SonarQube.png)
+![Trivy](screenshot/Trivy.png)
+![prometheus](screenshot/Prometheus.png)
+![Grafana](screenshot/Grafana.png)
+![Node Export](screenshot/nodeexport.png)
 
+
+
+
+
+
+---
 ## 🧰 Tech Stack
 
 | Layer | Tool |
